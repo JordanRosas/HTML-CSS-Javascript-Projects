@@ -1,0 +1,80 @@
+body{
+	font-family:arial,serif;
+	margin:0;
+	padding:0;
+}
+.infierno{
+	width:100%;
+	height:100vh;
+	float:left;
+	background-color:#2e2e2e;
+}
+.cielo{
+	max-width: 940px;
+	margin: auto;
+	width:100%;
+	display:table;
+	margin-top: 25vh;
+}
+.hover{
+	margin:0;
+	padding:0;
+	list-style-type: none;
+}
+.hover li{
+	position:relative;
+	max-width: 293px;
+	background-color: #4f4f4f;
+	width:100%;
+	height:400px;
+	margin:10px;
+	float:left;
+	overflow:hidden;
+	cursor:pointer;
+}
+.h1,.h2,.h3{
+	position:absolute;
+	top:0;
+	left:0;
+	width:0%;
+	height:135px;
+	background-color:#8770af;
+	transition-duration: 0.8s;
+}
+.h2{
+	top:133px;
+	width:100%;
+	left:293px;
+	background-color:#6c4ca3;
+	transition-duration:0.8s;
+}
+.h3{
+	top:266px;
+	transition-duration: 0.8s;
+}
+.hover li:hover .h1, .hover li:hover .h3{
+	width:100%;
+}
+.hover li:hover .h2{
+	left:0;
+}
+.hover li h2{
+	position: absolute;
+	top:187px;
+	color:#fff;
+	text-transform: uppercase;
+	font-size: 25px;
+	z-index: 1;
+	left:-100px;
+	transform: translate(-50%);
+	width:134px;
+	letter-spacing: 1px;
+	transition-duration:1.5s;
+}
+.hover li:hover h2{
+	left:50%;
+}
+.img{
+	background-position:center;
+	background-repeat:no-repeat;
+}
