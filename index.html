@@ -1,63 +1,120 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name = "viewport" content= "width = device-width">
-  <title> Mt. Rainier | Welcome</title>
-  <link rel = "stylesheet" href = "style_1.css">
+	<title>CSS Panel Slider </title>
+	<!-- <link rel = "stylesheet" href = "PanelSlider.css" type = "text/css"> -->
 </head>
+<!-- CSS -->
+<style>
+body{
+	font-family:Arial, serif;
+	margin:0;
+	padding:0;
+}
+.infierno{
+	width:100%;
+	height:100vh;
+	float:left;
+	background-color:#2e2e2e;
+}
+.cielo{
+	max-width:940px;
+	margin:auto;
+	width:100%;
+	display:table;
+	margin-top:25vh;
+}
+.hover{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+.hover li{
+	position:relative;
+	max-width:293px;
+	background-color:#229954;
+	width:100%;
+	height:400px;
+	margin:10px;
+	float:left;
+	overflow:hidden;
+	cursor:pointer;
+}
+.h1,.h2,.h3{
+	position:absolute;
+	top:0;
+	left:0;
+	width:0%;
+	height:135px;
+	background-color:#2ECC71;
+	transition-duration:0.8s;
+}
+.h2{
+	top:133px;
+	width:100%;
+	left:293px;
+	background-color:#229954;
+	transition-duration:0.8s;
+}
+.h3{
+	top:266px;
+	transition-duration:0.8s;
+}
+.hover li:hover .h1, .hover li:hover .h3{
+	width:100%;
+}
+.hover li:hover .h2{
+	left:0;
+}
+.hover li h2{
+	position:absolute;
+	top:187px;
+	color:#fff;
+	text-transform:uppercase;
+	font-size:25px;
+	z-index:1;
+	left:-100px;
+	transform:translate(-50%);
+	width:134px;
+	letter-spacing:1px;
+	transition-duration:1.5s;
+}
+.hover li:hover h2{
+	left:50%;
+}
+.img{
+	background-repeat:no-repeat;
+	background-position:center;
+}
+</style>
+<!-- HTML -->
 <body>
-  <header id = "top" class = "main-header">
-  <span class = "title">A Journey Through Mt. Rainier</span>
-  <h1>Mt. Rainier, Washington</h1>
-  <img class = "arrow-down" src = "img/down-arrow.svg">
-  </header>
-
-  <div class = "primary-content t-border">
-    <p class = "intro">One of the most beautiful spots for scenic sunsets, abundant trees, and wildlife, and best hiking spots in Washington state!
-    </p>
-    <a class = "callout" href = "#more">Find Out More</a>
-    <div class = "wildlife">
-      <h2>Check Out All The Wildlife</h2>
-      <p>
-       Mt. Rainier isn't just home to the beautiful Evergreens. It is what many animals would call home! Animals such as <a href = "#">Bears</a>, <a href = "#">Eagles</a>, <a href = "#">Rabbits</a>, and <a href = "#">Deer</a>. So be sure to keep it free and clear of trash! You wouldnt want someone dirtying up your home would you?
-      </p>
-    </div> <!--End .wildlife-->
-
-    <a class = "callout" href = "#wildlife">See The Wildlife</a>
-  </div><!--End .primary-content-->
-
-  <div class = "secondary-content t-border group">
-    <div class = "resorts">
-      <img src = "img/pack.jpg" src = "road and trees">
-    <h3>From Camping To Resorts</h3>
-    <p>
-     If you get tired of roughing it - Here are some options to give you a break from the wilderness.
-    </p>
-    <ul>
-      <li><a href = "#">Mouthhaven Resort</a></li>
-      <li><a href = "#">STORMKING SPA and CABINS</a></li>
-      <li><a href = "#">Alta Crystal Resort</a></li>
-    </ul>
-  </div>
-
-  <div class = "tips">
-      <img src = "img/WA.jpg" src = "waterfall and trees">
-      <h3>pack accordingly</h3>
-      <p>
-      Mt. Rainier is a challenging hike so be sure to pack the necesities and then some!
-      </p>
-      <ol>
-        <li>Jacket</li>
-        <li>Backpack, Water, Snacks</li>
-        <li>Climbing Poles</li>
-        <li>Camera, and Anything else you see fit!</li>
-      </ol>
-    </div>
-  </div>
-
-  <footer class = "main-footer">
-    <p>All Rights Reserved In The State Of <a href  ="#">Washington</a>.</p>
-    <a href = "#top">Back To Top &raquo; </a>
-  </footer>
+	<div class = "infierno">
+		<div class = "cielo">
+			<div class = "hover">
+				<li>
+					<img src = "img/flames.jpg" alt = "fire">
+					<h2>Fire</h2>
+					<span class = "h1"></span>
+					<span class = "h2"></span>
+					<span class = "h3"></span>
+				</li>
+				<li>
+					<img src = "img/water.jpg" alt = "water">
+					<h2>Water</h2>
+					<span class = "h1"></span>
+					<span class = "h2"></span>
+					<span class = "h3"></span>
+				</li>
+				<li>
+					<img src = "img/dirt.jpg" alt = "water">
+					<h2>Earth</h2>
+					<span class = "h1"></span>
+					<span class = "h2"></span>
+					<span class = "h3"></span>
+				</li>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
