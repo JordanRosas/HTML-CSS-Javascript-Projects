@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog Previewer</title>
+	<link rel = 'stylesheet' href = 'blog.css' type = 'text/css'>
+</head>
+<body>
+	<div id = "flashMessage">
+		Your Changes Have Been Saved!
+	</div>
+	<div class = "blogNewPost">
+		<h1 class = "blogPage-title">Blog Entry Previewing Application</h1>
+		<p class = "blogTitle-area">
+			<label>Title</label>
+
+			<!-- Where the user will type the title of their blog -->
+			<input type = "text" id = "blogTitleInput">
+		</p>
+		<p class = "blogContent-area">
+			<label>Content</label>
+			<!-- where the user will type the Content of their blog -->
+			<textarea id = "blogContentInput"></textarea>
+		</p>
+		<p>
+			<!-- where the user will submit their blog entry for preview -->
+			<button id = "previewButton">Preview</button>
+		</p>
+	</div>
+
+	<div class = "blogPreviewArea">
+		<h2 id = "blogTitlePreview"></h2>
+		<!-- blogContentPreview has its own <div> -->
+		<div id = "blogContentPreview">
+		</div>
+	</div>
+	<!-- links to jQuery library and the javascript file for the application -->
+	<script src = "jQuery.js" type = "text/javascript"></script>
+	<script src = "blogapp.js" type = "text/javascript"></script>
+</body>
+</html>
